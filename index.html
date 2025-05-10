@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gioco della Vita</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="level-header">
+    <span id="level-name">Livello 1 - Polvere</span>
+    <span id="xp-progress">XP: 0 / 100</span>
+    <span id="energy">Energia: 100%</span>
+  </div>
+
+  <button id="info-button">Guida</button>
+  <div id="info-popup" class="popup hidden">
+    <h2>Come si gioca</h2>
+    <p>Ogni stanza contiene azioni giornaliere che ti fanno guadagnare XP, consumano energia e ti fanno salire di livello.</p>
+    <p>Il giorno avanza automaticamente a mezzanotte. Il livello cambia materiale ogni 10 livelli.</p>
+    <button onclick="closePopup()">Chiudi</button>
+  </div>
+
+  <div id="rooms">
+    <div class="room" data-room="studio">Studio</div>
+    <div class="room" data-room="lavoro">Lavoro</div>
+    <div class="room" data-room="casa">Pulizia Casa</div>
+    <div class="room" data-room="creativita">Disegno</div>
+    <div class="room" data-room="apprendimento">Impara</div>
+    <div class="room" data-room="finanze">Salvadanaio</div>
+  </div>
+
+  <div id="actions-panel" class="hidden">
+    <h3 id="room-title"></h3>
+    <ul id="actions-list"></ul>
+    <button onclick="closeActions()">Chiudi</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
