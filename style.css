@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #1f1f2e, #2b2b40);
+  color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+#level-header {
+  background: #292944;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px #5f5fff;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#info-button {
+  background-color: #5f5fff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#info-button:hover {
+  background-color: #4c4cd6;
+}
+
+.popup {
+  background: #333356;
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  max-width: 90%;
+  width: 400px;
+  z-index: 999;
+  box-shadow: 0 0 12px #8888ff;
+}
+
+.hidden {
+  display: none;
+}
+
+#rooms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+.room {
+  background: #3b3b60;
+  padding: 1.2rem;
+  border-radius: 14px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+  box-shadow: 0 0 8px #5f5fff;
+}
+
+.room:hover {
+  transform: scale(1.05);
+  background: #5f5fff;
+}
+
+#actions-panel {
+  background: #2a2a44;
+  padding: 1rem;
+  border-radius: 14px;
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 14px #8888ff;
+  z-index: 999;
+}
+
+#actions-list {
+  list-style: none;
+  padding: 0;
+}
+
+#actions-list li {
+  margin: 0.5rem 0;
+  background: #444466;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+#actions-list li:hover {
+  background: #5f5fff;
+  color: white;
+  }
